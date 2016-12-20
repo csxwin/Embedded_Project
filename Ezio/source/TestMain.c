@@ -460,7 +460,7 @@ int main(void){
     ROM_TimerEnable(TIMER1_BASE, TIMER_A);
 	//Timer1B_Count_Down_Init();
 
-	/*
+	
 	UART1_Init(); 
 	DebugPort("Init Complete");
 	Nokia5110_Init();
@@ -512,7 +512,7 @@ int main(void){
 
 	//ST7735_RInit(INITR_GREENTAB);
 	DebugPort("Flash Operation Complete");
-	*/
+	
 	//Universal_SetCursor(x, y);
 	//DebugPort("Please input on the color screen");
 	//ST7735_KeyBoard(ST7735_X, ST7735_Y);
