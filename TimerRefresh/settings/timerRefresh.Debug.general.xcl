@@ -1,0 +1,15 @@
+"D:\IAR\arm\bin\armproc.dll" 
+
+"D:\IAR\arm\bin\armlmiftdi.dll" 
+
+"E:\project\TimerRefresh\main.c" 
+
+--plugin "D:\IAR\arm\bin\armbat.dll" 
+
+--device_macro "D:\IAR\arm\config\debugger\TexasInstruments\TM4C129.dmac" 
+
+--flash_loader "D:\IAR\arm\config\flashloader\TexasInstruments\FlashTC4_NC.board" 
+
+
+
+

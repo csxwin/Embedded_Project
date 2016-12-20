@@ -1,0 +1,14 @@
+Dependencies for Project 'RTOS', Target 'RTOS': (DO NOT MODIFY !)
+F (.\startup.s)(0x54CAEFAC)(--cpu Cortex-M4 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\osasm.s)(0x54CAF16A)(--cpu Cortex-M4 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary--list .\osasm.lst --xref -o .\osasm.o --depend .\osasm.d)
+F (.\os.c)(0x572AC5BE)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\.. --C99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\os.o --omf_browse .\os.crf --depend .\os.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C87C24)
+I (os.h)(0x572AC5EE)
+I (PLL.h)(0x54CAF16C)
+F (.\PLL.c)(0x572AB6DE)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\.. --C99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\pll.o --omf_browse .\pll.crf --depend .\pll.d)
+I (PLL.h)(0x54CAF16C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C87C24)
+I (tm4c123gh6pm.h)(0x55F5ADB6)
+F (.\user.c)(0x572ABF5E)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\.. --C99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\user.o --omf_browse .\user.crf --depend .\user.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C87C24)
+I (os.h)(0x572AC5EE)

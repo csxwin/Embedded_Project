@@ -1,0 +1,40 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+E:\project\LED_Flash_Timer\TM4C129NCPDT\Keil\PLL.uvproj
+Project File Date:  12/03/2016
+
+<h2>Output:</h2>
+Build target 'PLL'
+compiling PLLTestMain.c...
+linking...
+Program Size: Code=1520 RO-data=32 RW-data=4 ZI-data=1124  
+".\PLL.axf" - 0 Error(s), 0 Warning(s).
+Load "E:\\project\\LED_Flash_Timer\\TM4C129NCPDT\\Keil\\PLL.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+</pre>
+</body>
+</html>
+..
+Program Size: Code=1520 RO-data=32 RW-data=4 ZI-data=1124  
+".\PLL.axf" - 0 Error(s), 2 Warning(s).
+ warning, 3 errors
+".\PLL.axf" - 3 Error(s), 1 Warning(s).
+Target not created
+ - 2 Error(s), 0 Warning(s).
+compiling Timer.c...
+"Timer.c" - 0 Error(s), 0 Warning(s).
+stMain.c...
+PLLTestMain.c(101): error:  #20: identifier "GPIO_PORTJ0" is undefined
+    if(GPIO_PORTJ0 == 0x01){         // only call PLL_Init() if switch is initially released
+PLLTestMain.c(114): error:  #20: identifier "GPIO_PORTN3210" is undefined
+    GPIO_PORTN3210 = 0x05;           // turn on LED2 and PN2 and turn off LED1 and PN3
+PLLTestMain.c: 0 warnings, 2 errors
+"PLLTestMain.c" - 2 Error(s), 0 Warning(s).
+compiling PLLTestMain.c...
+"PLLTestMain.c" - 0 Error(s), 0 Warning(s).
