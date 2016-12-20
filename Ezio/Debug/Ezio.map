@@ -1,0 +1,276 @@
+******************************************************************************
+                  TI ARM Linker PC v5.0.4                      
+******************************************************************************
+>> Linked Mon May 09 23:01:27 2016
+
+OUTPUT FILE NAME:   <Ezio.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 000011d5
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00008000  00001536  00006aca  R  X
+  SRAM                  20000000   00003000  00000428  00002bd8  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00001538   00001538    r-x
+  00000000    00000000    0000026c   0000026c    r-- .intvecs
+  0000026c    0000026c    00001092   00001092    r-x .text
+  00001300    00001300    000001e8   000001e8    r-- .const
+  000014e8    000014e8    00000050   00000050    r-- .cinit
+20000000    20000000    000003fc   00000000    rw-
+  20000000    20000000    00000200   00000000    rw- .stack
+  20000200    20000200    000001fc   00000000    rw- .bss
+200003fc    200003fc    0000002c   0000002c    rw-
+  200003fc    200003fc    0000002c   0000002c    rw- .data
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    0000026c     
+                  00000000    0000026c     startup_ccs.obj (.intvecs)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.text      0    0000026c    00001092     
+                  0000026c    0000077c     Nokia5110.obj (.text)
+                  000009e8    00000440     TestMain.obj (.text)
+                  00000e28    000001a0     RS232.obj (.text)
+                  00000fc8    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.obj (.text)
+                  00001064    00000094                                   : auto_init.obj (.text)
+                  000010f8    0000007c     PLL.obj (.text)
+                  00001174    0000005e     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_rle.obj (.text)
+                  000011d2    00000002     --HOLE-- [fill = 0]
+                  000011d4    00000048                                   : boot.obj (.text)
+                  0000121c    00000044                                   : cpy_tbl.obj (.text)
+                  00001260    00000040                                   : exit.obj (.text)
+                  000012a0    00000018                                   : args_main.obj (.text)
+                  000012b8    00000014                                   : _lock.obj (.text)
+                  000012cc    00000012                                   : copy_zero_init.obj (.text:decompress:ZI)
+                  000012de    0000000e                                   : copy_decompress_none.obj (.text:decompress:none)
+                  000012ec    0000000c     startup_ccs.obj (.text)
+                  000012f8    00000006     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_rle.obj (.text:decompress:rle24)
+
+.const     0    00001300    000001e8     
+                  00001300    000001e0     Nokia5110.obj (.const:ASCII)
+                  000014e0    00000008     Nokia5110.obj (.const:.string)
+
+.cinit     0    000014e8    00000050     
+                  000014e8    00000027     (.cinit..data.load) [load image, compression = rle]
+                  0000150f    00000001     --HOLE-- [fill = 0]
+                  00001510    0000000c     (__TI_handler_table)
+                  0000151c    00000004     --HOLE-- [fill = 0]
+                  00001520    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00001528    00000010     (__TI_cinit_table)
+
+.stack     0    20000000    00000200     UNINITIALIZED
+                  20000000    00000200     --HOLE--
+
+.bss       0    20000200    000001fc     UNINITIALIZED
+                  20000200    000001f8     Nokia5110.obj (.bss:Screen)
+                  200003f8    00000004     TestMain.obj (.bss)
+
+.data      0    200003fc    0000002c     
+                  200003fc    00000018     TestMain.obj (.data)
+                  20000414    00000008     rtsv7M4_T_le_v4SPD16_eabi.lib : _lock.obj (.data)
+                  2000041c    00000008                                   : exit.obj (.data)
+                  20000424    00000004                                   : stkdepth_vars.obj (.data)
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00001528 records: 2, size/record: 8, table size: 16
+	.data: load addr=000014e8, load size=00000027 bytes, run addr=200003fc, run size=0000002c bytes, compression=rle
+	.bss: load addr=00001520, load size=00000008 bytes, run addr=20000200, run size=000001fc bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00001510 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_rle24
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+00000b3f   BLUE_LED_Init
+00001261   C$$EXIT
+000009c3   DebugPort
+000009e9   Delay
+000009f9   Love_Bofei
+000014e0   Masks
+000006c3   Nokia5110_Clear
+0000091d   Nokia5110_ClearBuffer
+00000951   Nokia5110_ClrPxl
+00000947   Nokia5110_DisplayBuffer
+000006f5   Nokia5110_DrawFullImage
+000009a1   Nokia5110_Draw_Partial_Image
+000002db   Nokia5110_Init
+000003fd   Nokia5110_OutChar
+0000043d   Nokia5110_OutString
+000004a5   Nokia5110_OutUDec
+00000739   Nokia5110_PrintBMP
+00000683   Nokia5110_SetCursor
+0000097b   Nokia5110_SetPxl
+000010f9   PLL_Init
+00000f7b   RS485_DR
+000012ed   ResetISR
+UNDEFED    SHT$$INIT_ARRAY$$Base
+UNDEFED    SHT$$INIT_ARRAY$$Limit
+20000408   ST7735_X
+20000409   ST7735_Y
+20000200   Screen
+00000a39   Stay_Strong
+00000add   Timer0A_Handler
+00000b87   Timer0IntHandler
+00000c4f   Timer1A_Handler
+00000bdb   Timer1B_Count_Down_Init
+00000bb1   Timer1IntHandler
+00000e59   UART1_Init
+00000f35   UART1_Out_String
+00000f53   UART1_RX
+00000eff   UART1_TX
+00000a79   UART_LB
+20000200   __STACK_END
+00000200   __STACK_SIZE
+20000200   __STACK_TOP
+00001528   __TI_CINIT_Base
+00001538   __TI_CINIT_Limit
+00001510   __TI_Handler_Table_Base
+0000151c   __TI_Handler_Table_Limit
+00000001   __TI_args_main
+00001065   __TI_auto_init
+000012df   __TI_decompress_none
+000012f9   __TI_decompress_rle24
+00000000   __TI_static_base__
+000012cd   __TI_zero_init
+00000fc9   __aeabi_memcpy
+00000fc9   __aeabi_memcpy4
+00000fc9   __aeabi_memcpy8
+ffffffff   __binit__
+ffffffff   __c_args__
+20000000   __stack
+000012a1   _args_main
+000011d5   _c_int00
+2000041c   _cleanup_ptr
+20000420   _dtors_ptr
+20000414   _lock
+000012c7   _nop
+000012bf   _register_lock
+000012b9   _register_unlock
+20000418   _unlock
+00001265   abort
+ffffffff   binit
+0000121d   copy_in
+0000126d   exit
+200003fa   freq
+00000000   g_pfnVectors
+200003fc   love
+00000ce1   main
+20000424   main_func_sp
+00000fc9   memcpy
+200003f8   uart_in
+200003f9   uart_out
+2000040c   x
+20000410   y
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000000   __TI_static_base__
+00000000   g_pfnVectors
+00000001   __TI_args_main
+00000200   __STACK_SIZE
+000002db   Nokia5110_Init
+000003fd   Nokia5110_OutChar
+0000043d   Nokia5110_OutString
+000004a5   Nokia5110_OutUDec
+00000683   Nokia5110_SetCursor
+000006c3   Nokia5110_Clear
+000006f5   Nokia5110_DrawFullImage
+00000739   Nokia5110_PrintBMP
+0000091d   Nokia5110_ClearBuffer
+00000947   Nokia5110_DisplayBuffer
+00000951   Nokia5110_ClrPxl
+0000097b   Nokia5110_SetPxl
+000009a1   Nokia5110_Draw_Partial_Image
+000009c3   DebugPort
+000009e9   Delay
+000009f9   Love_Bofei
+00000a39   Stay_Strong
+00000a79   UART_LB
+00000add   Timer0A_Handler
+00000b3f   BLUE_LED_Init
+00000b87   Timer0IntHandler
+00000bb1   Timer1IntHandler
+00000bdb   Timer1B_Count_Down_Init
+00000c4f   Timer1A_Handler
+00000ce1   main
+00000e59   UART1_Init
+00000eff   UART1_TX
+00000f35   UART1_Out_String
+00000f53   UART1_RX
+00000f7b   RS485_DR
+00000fc9   __aeabi_memcpy
+00000fc9   __aeabi_memcpy4
+00000fc9   __aeabi_memcpy8
+00000fc9   memcpy
+00001065   __TI_auto_init
+000010f9   PLL_Init
+000011d5   _c_int00
+0000121d   copy_in
+00001261   C$$EXIT
+00001265   abort
+0000126d   exit
+000012a1   _args_main
+000012b9   _register_unlock
+000012bf   _register_lock
+000012c7   _nop
+000012cd   __TI_zero_init
+000012df   __TI_decompress_none
+000012ed   ResetISR
+000012f9   __TI_decompress_rle24
+000014e0   Masks
+00001510   __TI_Handler_Table_Base
+0000151c   __TI_Handler_Table_Limit
+00001528   __TI_CINIT_Base
+00001538   __TI_CINIT_Limit
+20000000   __stack
+20000200   Screen
+20000200   __STACK_END
+20000200   __STACK_TOP
+200003f8   uart_in
+200003f9   uart_out
+200003fa   freq
+200003fc   love
+20000408   ST7735_X
+20000409   ST7735_Y
+2000040c   x
+20000410   y
+20000414   _lock
+20000418   _unlock
+2000041c   _cleanup_ptr
+20000420   _dtors_ptr
+20000424   main_func_sp
+ffffffff   __binit__
+ffffffff   __c_args__
+ffffffff   binit
+UNDEFED    SHT$$INIT_ARRAY$$Base
+UNDEFED    SHT$$INIT_ARRAY$$Limit
+
+[80 symbols]

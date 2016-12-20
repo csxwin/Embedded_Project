@@ -1,0 +1,1 @@
+"./source/startup_ccs.obj" "./source/common.obj" "./source/TestMain.obj" "./source/TIMER0.obj" "./source/ST7735.obj" "./source/S25FL512S.obj" "./source/RS232.obj" "./source/PWM.obj" "./source/PLL.obj" "./source/Nokia5110.obj" "./source/ADC.obj" -l"libc.a" -l"C:\ti\TivaWare_C_Series-2.1.2.111\driverlib\ccs\Debug\driverlib.lib" "../tm4c1231c3pm.cmd" 
